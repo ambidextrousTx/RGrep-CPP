@@ -3,8 +3,12 @@
 #include <iostream>
 
 int main() {
-    std::string testString("This is a sample string");
-    std::cout << testString << std::endl;
+    std::string greeting("Welcome to RGrep-CPP");
+    std::cout << greeting << std::endl;
+    std::string inputString;
+
+    std::cin >> inputString;
+    std::cout << "You are looking for " << inputString << std::endl;
 
     return 0;
 }
