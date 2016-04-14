@@ -5,8 +5,6 @@
 #include <sstream>
 
 int main() {
-    std::string greeting("Welcome to RGrep-CPP");
-    std::cout << greeting << std::endl;
     std::string firstInputString;
     std::string secondInputString;
 
