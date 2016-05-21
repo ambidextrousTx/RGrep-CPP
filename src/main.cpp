@@ -5,15 +5,15 @@
 #include <sstream>
 
 int main() {
-    std::string firstInputString;
-    std::string secondInputString;
+    std::string first_input;
+    std::string second_input;
 
     std::cout << "Enter the first string" << std::endl;
-    std::cin >> firstInputString;
+    std::cin >> first_input;
     std::cout << "Enter the second string" << std::endl;
-    std::cin >> secondInputString;
+    std::cin >> second_input;
 
-    if (firstInputString == secondInputString) {
+    if (first_input == second_input) {
         std::cout << "Match!" << std::endl;
     }
 
@@ -21,18 +21,18 @@ int main() {
     std::cout << "Enter a filename in which to look for the string" << std::endl;
     std::cin >> fileName;
 
-    std::ifstream fileInputStream(fileName);
+    std::ifstream file_input_stream(fileName);
     std::string line;
-    if (fileInputStream.is_open()) {
+    if (file_input_stream.is_open()) {
         std::cout << "Successfully opened " << fileName << std::endl;
         while(true) {
-            if (fileInputStream.fail()) {
+            if (file_input_stream.fail()) {
                 std::cout << "The file input stream went into an error state" << std::endl;
                 break;
             }
-            getline(fileInputStream, line);
+            getline(file_input_stream, line);
             std::cout << line << std::endl;
-            if (firstInputString == line) {
+            if (first_input == line) {
                 std::cout << "Match!" << std::endl;
             }
         }
