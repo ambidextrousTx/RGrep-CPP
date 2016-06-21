@@ -5,7 +5,8 @@
 #include <sstream>
 
 int main(int argc, char * argv[]) {
-    std::cout << "You supplied " << argc << " arguments, which were: " << std::endl;
+    std::cout << "You supplied " << argc << " arguments, which were: "
+              << std::endl;
     for (size_t i = 0; i < argc; ++i) {
         std::cout << argv[i] << std::endl;
     }
@@ -22,7 +23,8 @@ int main(int argc, char * argv[]) {
     }
 
     std::string fileName;
-    std::cout << "Enter a filename in which to look for the string" << std::endl;
+    std::cout << "Enter a filename in which to look for the string"
+              << std::endl;
     std::cin >> fileName;
 
     std::ifstream file_input_stream(fileName);
@@ -31,7 +33,8 @@ int main(int argc, char * argv[]) {
         std::cout << "Successfully opened " << fileName << std::endl;
         while(true) {
             if (file_input_stream.fail()) {
-                std::cout << "The file input stream went into an error state" << std::endl;
+                std::cout << "The file input stream went into an error state"
+                          << std::endl;
                 break;
             }
             getline(file_input_stream, line);
