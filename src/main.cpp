@@ -4,6 +4,8 @@
 #include <fstream>
 #include <sstream>
 
+bool exact_match(std::string, std::string);
+
 int main(int argc, char * argv[]) {
     std::cout << "You supplied " << argc << " arguments, which were: "
               << std::endl;
@@ -18,7 +20,7 @@ int main(int argc, char * argv[]) {
     std::cout << "Enter the second string" << std::endl;
     std::cin >> second_input;
 
-    if (first_input == second_input) {
+    if (exact_match(first_input, second_input)) {
         std::cout << "Match!" << std::endl;
     }
 
