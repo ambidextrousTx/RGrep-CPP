@@ -5,6 +5,7 @@
 #include <sstream>
 
 bool exact_match(std::string, std::string);
+bool match_in_file(std::string, std::string);
 
 int main(int argc, char * argv[]) {
     std::cout << "You supplied " << argc << " arguments, which were: "
@@ -24,29 +25,13 @@ int main(int argc, char * argv[]) {
         std::cout << "Match!" << std::endl;
     }
 
-    std::string fileName;
+    std::string file_name;
     std::cout << "Enter a filename in which to look for the string"
               << std::endl;
-    std::cin >> fileName;
+    std::cin >> file_name;
 
-    std::ifstream file_input_stream(fileName);
-    std::string line;
-    if (file_input_stream.is_open()) {
-        std::cout << "Successfully opened " << fileName << std::endl;
-        while(true) {
-            if (file_input_stream.fail()) {
-                std::cout << "The file input stream went into an error state"
-                          << std::endl;
-                break;
-            }
-            getline(file_input_stream, line);
-            std::cout << line << std::endl;
-            if (first_input == line) {
-                std::cout << "Match!" << std::endl;
-            }
-        }
-    } else {
-        std::cout << "Could not open file for reading" << std::endl;
+    if (match_in_file(file_name, first_input)) {
+        std::cout << "Match!" << std::endl;
     }
 
     return 0;
