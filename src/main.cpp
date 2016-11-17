@@ -8,11 +8,6 @@ bool exact_match(std::string, std::string);
 bool match_in_file(std::string, std::string);
 
 int main(int argc, char * argv[]) {
-    std::cout << "You supplied " << argc << " arguments, which were: "
-              << std::endl;
-    for (size_t i = 0; i < argc; ++i) {
-        std::cout << argv[i] << std::endl;
-    }
     std::string first_input;
     std::string second_input;
 
