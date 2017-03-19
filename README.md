@@ -8,11 +8,11 @@ Trying to follow the modern C++ trends.
 
 * Exact match
 * Match in file
+* Ignore case
 
 ###To be implemented
 
 * Count: only print a count of matching lines
-* Ignore case
 * Files: only print the names of files matching anything
 * Invert match
 
