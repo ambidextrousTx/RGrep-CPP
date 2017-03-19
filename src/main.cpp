@@ -4,7 +4,7 @@
 #include <fstream>
 #include <sstream>
 
-bool exact_match(std::string, std::string);
+bool exact_match(std::string, std::string, bool);
 bool match_in_file(std::string, std::string);
 
 int main(int argc, char * argv[]) {
@@ -16,8 +16,12 @@ int main(int argc, char * argv[]) {
     std::cout << "Enter the second string" << std::endl;
     std::cin >> second_input;
 
-    if (exact_match(first_input, second_input)) {
+    if (exact_match(first_input, second_input, false)) {
         std::cout << "Match!" << std::endl;
+    }
+
+    if (exact_match(first_input, second_input, true)) {
+        std::cout << "Case insensitive match!" << std::endl;
     }
 
     std::string file_name;
