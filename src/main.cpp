@@ -7,6 +7,7 @@
 bool exact_match(std::string, std::string, bool);
 bool exact_match_count(std::string, std::string, bool);
 bool match_in_file(std::string, std::string);
+int match_count_in_file(std::string, std::string);
 
 int main(int argc, char * argv[]) {
     std::string first_input;
@@ -41,6 +42,8 @@ int main(int argc, char * argv[]) {
     if (match_in_file(file_name, first_input)) {
         std::cout << "Match!" << std::endl;
     }
+
+    std::cout << "Match count in file is " << match_count_in_file(file_name, first_input) << std::endl;
 
     return 0;
 }
