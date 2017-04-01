@@ -9,10 +9,11 @@ Trying to follow the modern C++ trends.
 * Exact match
 * Match in file
 * Ignore case
+* Count for exact match
 
 ###To be implemented
 
-* Count: only print a count of matching lines
+* Count: only print a count of matching lines in files
 * Files: only print the names of files matching anything
 * Invert match
 
